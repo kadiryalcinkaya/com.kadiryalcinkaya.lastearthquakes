@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">EarthQuakes</string>
+    <string name="lastest_time">Lastest Time</string>
+    <string name="near_me">Near Me</string>
+    <string name="lastest_earthquake">Lastest Earthquake</string>
+    <string name="time_">Time 		:</string>
+    <string name="order_by">Order By</string>
+    <string name="location_">Location 	:</string>
+    <string name="latitude">Latitude 	:</string>
+    <string name="longitude">Longitude 	:</string>
+    <string name="indensity">Indensity 	:</string>
+    <string name="dept">Dept		:</string>
+    <string name="connection_error_title">Opps!</string>
+    <string name="connection_error_message">Check the network status!</string>
+    <string name="order_by_location">Order by Location</string>
+    <string name="order_by_time">order by time</string>
+
+</resources>

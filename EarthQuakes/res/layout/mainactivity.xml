@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colormain"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/upSide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/TxtLastest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lastest_earthquake"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/TxtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtLastest"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" 
+            />
+
+        <TextView
+            android:id="@+id/TxtTimeParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtLastest"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@id/TxtTime"
+            android:padding="5dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtTimeParse"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp"
+            android:text="@string/location_"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtLocationParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/TxtTimeParse"
+            android:layout_below="@id/TxtTimeParse"
+            android:layout_toRightOf="@id/TxtLocation"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/TxtLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtLocationParse"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp"
+            android:text="@string/latitude"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtLatitudeParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/TxtTimeParse"
+            android:layout_below="@id/TxtLocationParse"
+            android:layout_toRightOf="@id/TxtLatitude"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/TxtLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtLatitudeParse"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp"
+            android:text="@string/longitude"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtLongitudeParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/TxtTimeParse"
+            android:layout_below="@id/TxtLatitudeParse"
+            android:layout_toRightOf="@id/TxtLongitude"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/TxtIndensity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtLongitudeParse"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp"
+            android:text="@string/indensity"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtIndensityParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/TxtTimeParse"
+            android:layout_below="@id/TxtLongitudeParse"
+            android:layout_toRightOf="@id/TxtIndensity"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/TxtDepth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxtIndensityParse"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp"
+            android:text="@string/dept"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TxtDepthParse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/TxtTimeParse"
+            android:layout_below="@id/TxtIndensityParse"
+            android:layout_toRightOf="@id/TxtDepth"
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/time_"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtButtonEx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/order_by"
+            android:textSize="21sp"
+            android:textStyle="italic" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/downSide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="80"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNearMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/near_me" />
+
+        <Button
+            android:id="@+id/btnLastestTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/lastest_time" />
+    </LinearLayout>
+
+</LinearLayout>
