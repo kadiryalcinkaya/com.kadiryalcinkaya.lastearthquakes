@@ -15,5 +15,6 @@
     <string name="connection_error_message">Check the network status!</string>
     <string name="order_by_location">Order by Location</string>
     <string name="order_by_time">order by time</string>
+    <string name="logout">Logout</string>
 
 </resources>

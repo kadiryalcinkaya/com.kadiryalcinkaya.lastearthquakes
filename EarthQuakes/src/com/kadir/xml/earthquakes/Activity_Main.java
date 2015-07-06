@@ -22,6 +22,8 @@ import com.kadir.xml.earthquakes.adapter.QuakeListSerializable;
 import com.kadir.xml.earthquakes.model.Quakes;
 import com.kadir.xml.earthquakes.task.DownloadDataASYNC;
 import com.kadir.xml.earthquakes.utilities.Network;
+import com.kadir.xml.earthquakes.utilities.Utilities;
+import com.parse.ParseUser;
 
 public class Activity_Main extends Activity {
 
@@ -49,6 +51,9 @@ public class Activity_Main extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.mainactivity);
+		
+		if (ParseUser.getCurrentUser() ==null) Utilities.clearAndStartNewActivity(this, Login_Activity.class);
+		
 		initializeComponents();
 		registerEvents();
 		try {
@@ -113,9 +118,9 @@ public class Activity_Main extends Activity {
 						double secondLati = LATI - q2.getLat();
 						double secondLong = LONG - q2.getLng();
 						double firstDistance = (Math.abs(firstLati) + Math
-								.abs(firstLong) / 2);
+								.abs(firstLong)) / 2;
 						double secondDistance = (Math.abs(secondLati) + Math
-								.abs(secondLong) / 2);
+								.abs(secondLong)) / 2;
 
 						if (firstDistance > secondDistance) {
 							result = 1;
