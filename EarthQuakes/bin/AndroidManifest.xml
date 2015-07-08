@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="16"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -30,10 +30,16 @@
         </activity>
         <activity
             android:name="com.kadir.xml.earthquakes.Activity_gps"
+            android:parentActivityName="com.kadir.xml.earthquakes.Activity_Main"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.kadir.xml.earthquakes.Login_Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kadir.xml.earthquakes.SignUp_Activity"
+            android:parentActivityName="com.kadir.xml.earthquakes.Login_Activity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

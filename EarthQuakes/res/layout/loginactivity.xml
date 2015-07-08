@@ -4,22 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/istanbul"
-    android:orientation="vertical" >
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="100dp" >
 
     <EditText
         android:id="@+id/userNameTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="@string/username_"
         android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#bcFFFFFF"
         android:textColorHint="#ffffff" />
 
     <EditText
         android:id="@+id/PasswordTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="@string/password_"
         android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#bcFFFFFF"
         android:textColorHint="#ffffff"
         tools:ignore="HardcodedText" />
 
@@ -28,10 +38,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#25ffffff"
+        android:background="#80000000"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="@string/login"
-        android:textColor="#60FFFFFF" />
+        android:textColor="#bcFFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/signUpTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="@string/are_you_new"
+            android:textColor="#bcFFFFFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
 </LinearLayout>

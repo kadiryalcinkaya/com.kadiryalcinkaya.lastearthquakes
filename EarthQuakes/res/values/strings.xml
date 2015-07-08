@@ -19,5 +19,6 @@
     <string name="login">Login</string>
     <string name="username_">Username</string>
     <string name="password_">Password</string>
+    <string name="are_you_new">are you new ? Click here for register</string>
 
 </resources>
