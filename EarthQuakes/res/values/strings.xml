@@ -16,5 +16,8 @@
     <string name="order_by_location">Order by Location</string>
     <string name="order_by_time">order by time</string>
     <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="username_">Username</string>
+    <string name="password_">Password</string>
 
 </resources>
