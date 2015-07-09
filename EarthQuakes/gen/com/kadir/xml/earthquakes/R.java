@@ -18,6 +18,7 @@ public final class R {
     public static final class id {
         public static final int Login=0x7f070007;
         public static final int PasswordTxt=0x7f070006;
+        public static final int SignUpbtn=0x7f07001e;
         public static final int TxtDepth=0x7f070015;
         public static final int TxtDepthParse=0x7f070016;
         public static final int TxtIndensity=0x7f070013;
@@ -37,13 +38,16 @@ public final class R {
         public static final int gps_list=0x7f070004;
         public static final int indensity_list_vw=0x7f070002;
         public static final int location_list_vw=0x7f070001;
-        public static final int mn_logout=0x7f07001b;
+        public static final int mn_logout=0x7f07001f;
         public static final int order_by=0x7f070003;
         public static final int signUpTxt=0x7f070008;
         public static final int time_list_vw=0x7f070000;
         public static final int txtButtonEx=0x7f070017;
         public static final int upSide=0x7f070009;
+        public static final int userEmailRegisterTxt=0x7f07001c;
+        public static final int userNameRegisterTxt=0x7f07001b;
         public static final int userNameTxt=0x7f070005;
+        public static final int userPassRegisterTxt=0x7f07001d;
     }
     public static final class layout {
         public static final int gps_list=0x7f030000;
@@ -61,6 +65,7 @@ public final class R {
         public static final int connection_error_message=0x7f04000c;
         public static final int connection_error_title=0x7f04000b;
         public static final int dept=0x7f04000a;
+        public static final int email_=0x7f040014;
         public static final int indensity=0x7f040009;
         public static final int lastest_earthquake=0x7f040003;
         public static final int lastest_time=0x7f040001;
@@ -74,6 +79,7 @@ public final class R {
         public static final int order_by_location=0x7f04000d;
         public static final int order_by_time=0x7f04000e;
         public static final int password_=0x7f040012;
+        public static final int signup_=0x7f040015;
         public static final int time_=0x7f040004;
         public static final int username_=0x7f040011;
     }

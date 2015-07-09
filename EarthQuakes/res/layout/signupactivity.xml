@@ -6,5 +6,51 @@
     android:background="@drawable/istanbul"
     android:gravity="center_vertical"
     android:orientation="vertical" >
+    
+     <EditText
+        android:id="@+id/userNameRegisterTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/username_"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#bcFFFFFF"
+        android:textColorHint="#ffffff" />
+     
+      <EditText
+        android:id="@+id/userEmailRegisterTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/email_"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#bcFFFFFF"
+        android:textColorHint="#ffffff" />
 
+      <EditText
+        android:id="@+id/userPassRegisterTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/password_"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#bcFFFFFF"
+        android:textColorHint="#ffffff" />
+      
+      <Button
+        android:id="@+id/SignUpbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#80000000"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/signup_"
+        android:textColor="#bcFFFFFF" />
 </LinearLayout>

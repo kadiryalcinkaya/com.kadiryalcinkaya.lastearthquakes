@@ -13,6 +13,8 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -51,9 +53,10 @@ public class Activity_Main extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.mainactivity);
-		
-		if (ParseUser.getCurrentUser() ==null) Utilities.clearAndStartNewActivity(this, Login_Activity.class);
-		
+
+		if (ParseUser.getCurrentUser() == null)
+			Utilities.clearAndStartNewActivity(this, Login_Activity.class);
+
 		initializeComponents();
 		registerEvents();
 		try {
@@ -63,6 +66,24 @@ public class Activity_Main extends Activity {
 		}
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_main_menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int itemID = item.getItemId();
+		switch (itemID) {
+		case R.id.mn_logout:
+			ParseUser.logOut();
+			Utilities.clearAndStartNewActivity(Activity_Main.this, Login_Activity.class);
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
 	private void UpdateTextFields(Quakes quake) {
 
 		txtTime.setText(quake.getName());
@@ -84,6 +105,8 @@ public class Activity_Main extends Activity {
 
 		btnNearMe = (Button) findViewById(R.id.btnNearMe);
 		btnLastestTime = (Button) findViewById(R.id.btnLastestTime);
+		
+		setProgressBarIndeterminate(true);
 
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		provider = locationManager.getBestProvider(new Criteria(), false);
@@ -153,8 +176,9 @@ public class Activity_Main extends Activity {
 					public int compare(Quakes first, Quakes second) {
 						return first.getName().compareTo(second.getName());
 					}
-					
+
 				});
+				Collections.reverse(QuakeLists);
 				intent.putExtra("list_quakes", new QuakeListSerializable(
 						QuakeLists));
 				intent.putExtra("order_by", 0);
@@ -164,7 +188,8 @@ public class Activity_Main extends Activity {
 	}
 
 	private void DownloadData() throws Exception, Exception {
-
+		
+		setProgressBarIndeterminateVisibility(true);
 		if (Network.isNetworkAvailable(this)) {
 			QuakeLists = new DownloadDataASYNC(this).execute(URL).get();
 			if (QuakeLists != null || QuakeLists.size() != 0) {
@@ -183,6 +208,7 @@ public class Activity_Main extends Activity {
 					});
 			builder.create().show();
 		}
+		setProgressBarIndeterminateVisibility(false);
 
 	}
 }
