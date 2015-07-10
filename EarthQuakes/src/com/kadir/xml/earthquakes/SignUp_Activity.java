@@ -39,8 +39,8 @@ public class SignUp_Activity extends Activity {
 				String email = emailTxt.getText().toString();
 				if (username.trim().isEmpty() || password.trim().isEmpty()
 						|| email.trim().isEmpty()) {
-					Utilities.showAlertDialog(SignUp_Activity.this, "Oopps!",
-							"Cant be Empty!", null);
+					Utilities.showAlertDialog(SignUp_Activity.this, getString(R.string.connection_error_title),
+							getString(R.string.err_empty), null);
 				} else {
 					setProgressBarIndeterminateVisibility(true);
 					ParseUser user = new ParseUser();
@@ -58,7 +58,7 @@ public class SignUp_Activity extends Activity {
 										Activity_Main.class);
 							} else {
 								Utilities.showAlertDialog(SignUp_Activity.this,
-										"Oopss!", exception.getMessage(), null);
+										getString(R.string.connection_error_title), exception.getMessage(), null);
 							}
 						}
 					});

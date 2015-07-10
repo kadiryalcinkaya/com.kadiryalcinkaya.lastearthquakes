@@ -22,5 +22,7 @@
     <string name="are_you_new">are you new ? Click here for register</string>
     <string name="email_">E-Mail</string>
     <string name="signup_">Sign Up</string>
+    <string name="err_empty">Cant be Empty!</string>
+    <string name="err_usr_empty">Username/Password Cant be empty!</string>
 
 </resources>

@@ -49,8 +49,9 @@ public class Login_Activity extends Activity {
 				String username = userNameTxt.getText().toString();
 				String password = passWordTxt.getText().toString();
 				if (username.isEmpty() || password.isEmpty()) {
-					Utilities.showAlertDialog(Login_Activity.this, "Oopps!",
-							"Username/Password Cant be empty!", null);
+					Utilities.showAlertDialog(Login_Activity.this,
+							getString(R.string.connection_error_title),
+							getString(R.string.err_usr_empty), null);
 				} else {
 					setProgressBarIndeterminateVisibility(true);
 					ParseUser.logInInBackground(username, password,
@@ -65,9 +66,12 @@ public class Login_Activity extends Activity {
 												Login_Activity.this,
 												Activity_Main.class);
 									} else {
-										Utilities.showAlertDialog(
-												Login_Activity.this, "Ooopss!",
-												exception.getMessage(), null);
+										Utilities
+												.showAlertDialog(
+														Login_Activity.this,
+														getString(R.string.connection_error_title),
+														exception.getMessage(),
+														null);
 									}
 								}
 							});
